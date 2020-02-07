@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.gellery_cell.view.*
 
 class GalleryAdapter:ListAdapter<PhotoItem,MyViewHolder>(DIFFCALLBACK) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
         val  holder  = MyViewHolder (LayoutInflater.from(parent.context).inflate(R.layout.gellery_cell,parent,false))
         holder.itemView.setOnClickListener{    }
 
@@ -25,7 +25,7 @@ class GalleryAdapter:ListAdapter<PhotoItem,MyViewHolder>(DIFFCALLBACK) {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
         holder.itemView.shimmerLayoutCell.apply {
             setShimmerColor(0x55ffffff)
             setShimmerAngle(0)
@@ -42,7 +42,7 @@ class GalleryAdapter:ListAdapter<PhotoItem,MyViewHolder>(DIFFCALLBACK) {
                     dataSource: DataSource?,
                     isFirstResource: Boolean
                 ): Boolean {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
                     return false.also { holder.itemView.shimmerLayoutCell?.stopShimmerAnimation() }
                 }
 
@@ -52,7 +52,7 @@ class GalleryAdapter:ListAdapter<PhotoItem,MyViewHolder>(DIFFCALLBACK) {
                     target: Target<Drawable>?,
                     isFirstResource: Boolean
                 ): Boolean {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    return false
                 }
 
             })
@@ -61,13 +61,13 @@ class GalleryAdapter:ListAdapter<PhotoItem,MyViewHolder>(DIFFCALLBACK) {
 
     object DIFFCALLBACK:DiffUtil.ItemCallback<PhotoItem>() {
         override fun areItemsTheSame(oldItem: PhotoItem, newItem: PhotoItem): Boolean {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
             return oldItem == newItem
         }
 
         override fun areContentsTheSame(oldItem: PhotoItem, newItem: PhotoItem): Boolean {
             return oldItem.photoId == newItem.photoId
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
         }
     }
 }
