@@ -1,6 +1,8 @@
 package com.ecut.gallery
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 data class Pixabay(
     val totalHits:Int,
@@ -10,9 +12,8 @@ data class Pixabay(
 
 }
 
-data class PhotoItem(
+@Parcelize data class PhotoItem(
     @SerializedName ("webformatURL") val previewUrl :String,
     @SerializedName("id") val photoId:Int,
     @SerializedName("largeImageURl") val fullUrl :String
-
-)
+):Parcelable
