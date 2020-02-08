@@ -37,6 +37,7 @@ class PhotoFragment : Fragment() {
         }
 //        Log.d("utl",arguments?.getParcelable<PhotoItem>("PHOTO")?.fullUrl)
 
+
         Glide.with(requireContext())
             .load(arguments?.getParcelable<PhotoItem>("PHOTO")?.fullUrl)
             .placeholder(R.drawable.ic_photo_size_select_actual_black_24dp)

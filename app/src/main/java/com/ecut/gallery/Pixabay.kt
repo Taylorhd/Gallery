@@ -12,8 +12,13 @@ data class Pixabay(
 
 }
 
-@Parcelize data class PhotoItem(
-    @SerializedName ("webformatURL") val previewUrl :String,
-    @SerializedName("id") val photoId:Int,
-    @SerializedName("largeImageURl") val fullUrl :String
+//@Parcelize data class PhotoItem(
+//    @SerializedName ("webformatURL") val previewUrl :String,
+//    @SerializedName("id") val photoId:Int,
+//    @SerializedName("largeImageURl") val fullUrl :String
+//):Parcelable
+@Parcelize data class PhotoItem (
+    @SerializedName("webformatURL") val previewUrl:String,
+    @SerializedName("id")  val photoId:Int,
+    @SerializedName("largeImageURL") val fullUrl:String
 ):Parcelable
