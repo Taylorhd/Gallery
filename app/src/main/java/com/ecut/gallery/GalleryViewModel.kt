@@ -8,8 +8,10 @@ import androidx.lifecycle.MutableLiveData
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
+
+
 import com.google.gson.Gson
-import java.io.StringReader
+
 
 class GalleryViewModel(application: Application) : AndroidViewModel(application) {
     private val _photoListLive = MutableLiveData<List<PhotoItem>>()

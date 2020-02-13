@@ -46,6 +46,7 @@ class GalleryFragment : Fragment() {
         recyclerView.apply {
             adapter = galleryAdapter
             layoutManager = GridLayoutManager(requireContext(),2)
+
         }
         galleryViewModel = ViewModelProvider(this,ViewModelProvider.AndroidViewModelFactory(requireActivity().application)).get(GalleryViewModel::class.java)
         galleryViewModel.photoListLive.observe(this, Observer {
